@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "types": ["node","sequelize"]
+
+  }
+   
+}
+
+// | Option                                     | Kya karta hai                                           | Simple Example / Reason                                 |
+// | ------------------------------------------ | ------------------------------------------------------- | ------------------------------------------------------- |
+// | **target: "ES2020"**                       | Output JS kis version me convert hoga                   | Latest features allowed (async, optional chaining etc.) |
+// | **module: "commonjs"**                     | Node.js ke require() system ko use karega               | Backend projects me commonjs best                       |
+// | **moduleResolution: "node"**               | Package resolve Node style se hoga                      | `import xyz from 'abc'` → node_modules me dhundhega     |
+// | **resolveJsonModule: true**                | .json files import kar sakte ho                         | `import data from "./data.json"`                        |
+// | **esModuleInterop: true**                  | CommonJS aur ES imports ko mix allow                    | `import express from "express"` bina error              |
+// | **allowSyntheticDefaultImports: true**     | Default export na ho tab bhi default import chal jayega | Same as above, compatibility                            |
+// | **strict: true**                           | TypeScript maximum safety enable                        | Null/undefined errors catch karta h                     |
+// | **forceConsistentCasingInFileNames: true** | File name case wrongly use na ho                        | Windows me case-insensitive problems avoid              |
+// | **skipLibCheck: true**                     | Node_modules ki type files check skip                   | Build fast, dev smooth                                  |
+// | **rootDir: "./src"**                       | TypeScript source folder                                | Sirf src folder compile hoga                            |
+// | **outDir: "./dist"**                       | Final JavaScript output folder                          | Compiled JS yahan store hoga                            |
+// | **typeRoots**                              | Types definitions kaha se load hongi                    | Custom type files + node types                          |
+// | **types: ["node", "sequelize"]**           | Specific types import                                   | Node.js aur Sequelize type support                      |
